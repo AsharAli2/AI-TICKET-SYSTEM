@@ -1,6 +1,6 @@
 // src/app/page.tsx
 
-import { ThemeToggle } from '@/components/ThemeToggle';
+import { ThemeToggle } from '../components/ThemeToggle';
 import Ticket from './(user)/Ticket/page';
 
 export default function Home() {
