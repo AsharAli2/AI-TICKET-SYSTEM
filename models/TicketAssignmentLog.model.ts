@@ -1,11 +1,16 @@
 // models/TicketAssignmentLog.js
 
-module.exports = (sequelize, Sequelize ) => {
-  const TicketAssignmentLog = sequelize.define("TicketAssignmentLog", {
+import { DataTypes } from "sequelize";
+
+const TicketAssignmentLog = (sequelize, Sequelize ) => {
+  return  sequelize.define("TicketAssignmentLog", {
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
+    },
+    user_id:{
+       type: DataTypes.STRING,
     },
     assignedBy: {
       type: DataTypes.STRING, // "system-ai" or "adminId"
@@ -14,3 +19,5 @@ module.exports = (sequelize, Sequelize ) => {
     reason: { type: DataTypes.TEXT },
   });
 };
+
+export default TicketAssignmentLog;

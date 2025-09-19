@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 
-module.exports = (sequelize, Sequelize) => {
+const ticket = (sequelize, Sequelize) => {
     return sequelize.define(
         "Ticket",
         {
@@ -43,3 +43,4 @@ module.exports = (sequelize, Sequelize) => {
         }
     );
 };
+export  default ticket;

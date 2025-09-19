@@ -1,7 +1,9 @@
 // models/Message.js
 
-module.exports = (sequelize, Sequelize) => {
-  const Message = sequelize.define("Message", {
+import { DataTypes } from "sequelize";
+
+const message = (sequelize, Sequelize) => {
+  return sequelize.define("Message", {
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
@@ -11,3 +13,5 @@ module.exports = (sequelize, Sequelize) => {
     attachments: { type: DataTypes.JSON },
   });
 };
+
+export default message;
